@@ -1,21 +1,24 @@
 //
 //  ContentView.swift
-//  Projeto_Pokedex
+//  ProjetoPokemon
 //
-//  Created by Aluno Mack on 20/03/25.
+//  Created by Aluno Mack on 19/03/25.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            PokedexView()
+                .tabItem {
+                    Label("Pokedex", systemImage : "magazine")
+                }
+            StatisticsView()
+                .tabItem {
+                    Label("Estatisticas", systemImage : "chart.xyaxis.line")
+                }
         }
-        .padding()
     }
 }
 
