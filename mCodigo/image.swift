@@ -44,3 +44,32 @@ struct PokemonCardView: View {
         .shadow(radius: 4)
     }
 }
+
+import SwiftUI
+
+enum PokemonType: String, CaseIterable {
+    case grass, poison, fire, water, electric, bug, normal, flying, ground, rock, psychic, fighting, ghost, ice, dragon, dark, steel, fairy
+
+    var color: Color {
+        switch self {
+        case .grass: return Color.green.opacity(0.7)
+        case .poison: return Color.purple.opacity(0.7)
+        case .fire: return Color.red.opacity(0.7)
+        case .water: return Color.blue.opacity(0.7)
+        case .electric: return Color.yellow.opacity(0.7)
+        case .bug: return Color.green.opacity(0.5)
+        case .normal: return Color.gray.opacity(0.5)
+        case .flying: return Color.cyan.opacity(0.6)
+        case .ground: return Color.brown.opacity(0.6)
+        case .rock: return Color(.sRGB, red: 0.6, green: 0.5, blue: 0.4, opacity: 0.7)
+        case .psychic: return Color.pink.opacity(0.7)
+        case .fighting: return Color.orange.opacity(0.7)
+        case .ghost: return Color.purple.opacity(0.8)
+        case .ice: return Color.cyan.opacity(0.7)
+        case .dragon: return Color.indigo.opacity(0.7)
+        case .dark: return Color.black.opacity(0.7)
+        case .steel: return Color.gray.opacity(0.7)
+        case .fairy: return Color.pink.opacity(0.6)
+        }
+    }
+}
