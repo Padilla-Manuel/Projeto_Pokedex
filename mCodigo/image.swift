@@ -73,3 +73,18 @@ enum PokemonType: String, CaseIterable {
         }
     }
 }
+
+
+
+struct ContentView: View {
+    var body: some View {
+        ScrollView {
+            LazyVStack(spacing: 16) {
+                ForEach(pokemons, id: \.id) { pokemon in
+                    PokemonCardView(pokemon: pokemon)
+                }
+            }
+            .padding()
+        }
+    }
+}
